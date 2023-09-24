@@ -1,0 +1,25 @@
+html,body{
+  background-color: #F9F9F9;
+}
+.container {
+    position: relative;
+      
+    }
+    h2{
+      color: white;
+    }
+
+table{
+  margin-bottom: 50px;
+  
+}
+
+.btn-info{
+  background-color: #4B56D2 !important;
+  color: white !important;
+}
+
+.btn-danger{
+  background-color: #ed3151 !important;
+  color: white !important;
+}

@@ -1,0 +1,124 @@
+<app-header-user></app-header-user>
+
+
+
+
+
+
+<div class="container">
+
+  <br/> <br/>
+
+<h3 class="text-center mb-5 text-uppercase">    Place Order </h3>
+
+
+
+<div class="card mx-auto text-center w-75">
+
+  <div class="card-body">
+
+ 
+
+<div class="form-group">
+
+  <h2>{{msg}}</h2>
+
+  <!-- <h4>Inventory Id: {{id}}</h4> -->
+
+  <br>
+
+  <h6>You are ordering items with Location No: {{inventory.locationNbr}} and Material Name: {{inventory.materialId}}
+
+    having Available Quantity {{inventory.resetQty - inventory.orderQty}}
+
+  </h6>
+
+  <br/>
+
+                <form #orderform="ngForm" (ngSubmit)="placeOrder()">
+
+                   
+
+                   
+
+                  <mat-form-field appearance="outline" class="form-outline d-flex justify-content-center mb-1 w-50 mx-auto" >  
+
+                    <mat-label> <button mat-icon-button class="btn-hov">
+
+                      <mat-icon>airport_shuttle</mat-icon>
+
+                    </button>
+
+                  <span> Order Quantity </span>
+
+                 </mat-label>
+
+                  <br/>
+
+                      <input matInput placeholder="Order Quantity" type="number" id="orderQty"  min="1"
+
+                      class="form-control-lg"
+
+                        [(ngModel)]="order.orderQty"
+
+                       required name="orderQty" style="background-color: transparent;" />  
+
+                     
+
+                     
+
+                   </mat-form-field>  
+
+               
+
+                   <p>Note: Order quantity <=
+
+                    {{inventory.resetQty - inventory.orderQty}}
+
+                  </p>
+
+       
+
+
+
+               
+
+
+
+     
+
+                <br>
+
+                <div>
+
+                 
+
+                  <button mat-raised-button type="button" (click)="placeOrder()"
+
+                  [disabled]="orderform.form.invalid || order.orderQty>=inventory.resetQty - inventory.orderQty || order.orderQty<=0"
+
+                  class="btn btn-primary btn-col btn-lg ms-2" style="color: white;"> Place Order </button>  
+
+                </div>  
+
+             
+
+                </form>
+
+                </div>
+
+                </div>
+
+             
+
+              </div>
+
+            </div>
+
+                 
+
+           
+
+           
+
+                <app-footer></app-footer>

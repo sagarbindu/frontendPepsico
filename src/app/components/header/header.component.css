@@ -1,0 +1,59 @@
+/* h2{
+
+    color: white;
+
+  } */
+
+
+
+  header{
+
+
+
+    font-size: medium;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    color: white;
+
+  }
+
+.bgnav {
+
+  background-color: #4B56D2 !important;
+
+}
+
+
+
+
+
+.navbar-nav .active>.nav-link,
+
+.navbar-nav .nav-link.active,
+
+.navbar-nav .nav-link.show,
+
+.navbar-nav .show>.nav-link,
+
+.navbar-nav .nav-link:focus,
+
+.navbar-nav .nav-link:hover {
+
+  color: #ffffff
+
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: white !important;
+  color: black !important;
+}
+
+
+.nav-link {
+
+  padding: 5px 5px 5px 5px;
+
+  transition: 0.2s
+
+}

@@ -1,0 +1,36 @@
+body 
+{  
+    color: green;  
+}  
+h2{
+    color: rgb(0, 213, 255);;
+}
+
+.main-text {
+    font-family: 'Titillium Web', sans-serif;
+}
+.button-clr {
+    background-color: #e3e3e3;
+    
+}
+.textcol {
+    color: #908d8d;
+}
+.signup {
+    margin-top: 12px;
+}
+.btn-info{
+    background-color: #4B56D2 !important;
+    color: white !important;
+}
+.btn-hov {
+    cursor: auto !important;
+}
+matInput {
+    color: transparent !important;
+    background-color: transparent !important;
+}
+.placeholder:focus , .placeholder:hover {
+    color: transparent !important;
+    background-color: transparent !important;
+}

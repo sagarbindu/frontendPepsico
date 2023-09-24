@@ -1,0 +1,52 @@
+<app-header></app-header>
+
+<br/>
+<h3 class="mb-5 text-uppercase text-center">Update Order Status</h3>
+<div class="container justify-content-center">
+  <div class="card mx-auto w-50 d-flex justify-content-center text-center">  
+    <br/>
+<form (ngSubmit)="update()" class="justify-content-center align-items-center">
+    <!-- <h2>{{msg}}</h2>  -->
+    <div class="form-group">
+ 
+      <div class="form-outline mb-4">  
+  <h4>Order Id: {{orderId}}</h4>
+  </div>
+  <br>
+
+  <!-- <p>Inventory id: {{inventory.id}}</p> -->
+ 
+  <p>Location No: {{order.locationNbr}}</p>
+  <p>Material Name: {{order.materialId}}</p>
+  <p>Order Quantity: {{order.orderQty}}</p>
+  
+  <label for="status">Order Status:</label>
+
+  <select name="orderStatus" id="orderStatus" [(ngModel)]="order.orderStatus">
+<!-- 
+    <option [ngValue]="In Progress" >In Progress</option>
+    <option [ngValue]="Cancelled">Cancelled</option>
+    <option [ngValue]="Completed">Completed</option> -->
+
+    <option *ngFor="let status of orderStatus" [ngValue]="status.name"> {{status.name}}</option>
+   </select>
+   <!-- {{order.orderStatus}} -->
+
+ 
+<div> 
+   
+<br/>
+  <button mat-raised-button type="button" (click)="update()" class="btn btn-info btn-md ms-2" 
+  [disabled]="order.orderStatus==='Cancelled'" style="margin-left: 5px"> Save </button>  
+  &nbsp;
+  <button mat-raised-button class="btn btn-danger btn-md ms-2" style="margin-left: 5px; margin-top: 5px" 
+    [disabled]="order.orderStatus==='In Progress' || order.orderStatus==='Completed'"
+    (click)="cancelOrder(order.orderId)">Cancel Order</button>
+</div>  
+</div>
+<br/>
+</form>
+</div>
+</div>
+
+<app-footer></app-footer>

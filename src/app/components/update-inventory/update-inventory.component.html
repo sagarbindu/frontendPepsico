@@ -1,0 +1,67 @@
+<app-header></app-header>
+<br/>
+<h3 class="mb-5 text-uppercase text-center"> Edit Inventory </h3>  
+<div class="container justify-content-center">
+  <div class="card mx-auto w-50 d-flex justify-content-center text-center">  
+    <br/>
+<form class="justify-content-center align-items-center" (ngSubmit)="update()">
+    <!-- <h2>{{msg}}</h2>  -->
+    <div class="form-group">
+ 
+<div class="form-outline mb-4">  
+  <h4>Inventory Id: {{id}}</h4>
+  
+</div>  
+  <div class="form-group row mb-4">  
+  <label class="col-lg-4 col-form-label" for="locationNbr">Location No - </label>
+  <div class="col-lg-8">
+  <input type="number" id="locationNbr" class="form-control form-control-md w-50" 
+  placeholder="Location Number" [(ngModel)]="inventory.locationNbr" name="locationNbr"/>  
+</div>
+</div>  
+  
+ 
+<div class="form-group row mb-4">  
+  <label class="col-lg-4 col-form-label" for="materialId">Material Name - </label>
+  <div class="col-lg-8">
+  <input type="text" id="materialId" class="form-control form-control-md w-50" 
+  placeholder="Material Name" [(ngModel)]="inventory.materialId" name="materialId"/>  
+</div>
+</div>  
+ 
+ <div class="form-group row mb-4">  
+  <label class="col-lg-4 col-form-label" for="resetQty">Reset Quantity - </label>
+  <div class="col-lg-8">
+  <input type="number" id="resetQty" class="form-control form-control-md w-50" 
+  placeholder="Reset Quantity" [(ngModel)]="inventory.resetQty" name="resetQty"/>  
+</div>
+</div>  
+
+ <!-- <div class="form-outline mb-4">  
+  <label class="form-label" for="orderQty">Order Quantity- </label>
+  <input type="number" id="orderQty" class="form-control form-control-lg" 
+  placeholder="Order Quantity" [(ngModel)]="inventory.orderQty" name="orderQty"/>  
+
+</div>   -->
+
+<!--<div class="form-group row mb-4">  
+  <label class="col-lg-4 col-form-label" for="updateDateTime">Date Time - </label>
+  <div class="col-lg-8">
+    <input type="datetime-local" id="updateDateTime" class="form-control form-control-md w-50" 
+    placeholder="Date-Time" [(ngModel)]="inventory.updateDateTime" name="updateDateTime">  
+  </div>
+</div> -->
+
+
+<div> 
+   
+
+  <button mat-raised-button type="button" (click)="update()" class="btn btn-info btn-md ms-2"> Save </button>  
+</div>  
+</div>
+
+</form>
+</div>
+</div>
+
+<app-footer></app-footer>

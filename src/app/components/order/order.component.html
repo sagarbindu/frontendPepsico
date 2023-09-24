@@ -1,0 +1,43 @@
+<app-header-user></app-header-user>
+<body>
+
+<!-- <div class="container">
+<button class="btn btn-success" type="submit" id="btn" (click)="getInventories()">View Inventory List</button>
+</div> -->
+<div class="container">
+    <br/>
+<table class="table table-hover mx-auto">
+    <thead>
+        <tr class="table-dark">
+            <th>Order Id</th>
+            <th>Location No</th>
+            <th>Material Name</th>
+            <th>Order Quantity</th> 
+            <th>Order Status</th>
+            <th>Order Date-Time</th>
+            <!-- <th>Action</th> -->
+        </tr>
+    </thead>
+
+    <tbody>
+        <!-- <tr> -->
+        <tr *ngFor="let order of orders">
+            <td>{{order.orderId}}</td>
+            <td>{{order.locationNbr}}</td>
+            <td>{{order.materialId}}</td>
+            <td>{{order.orderQty}}</td> 
+            <td>{{order.orderStatus}}</td>
+            <td>{{order.orderDateTime}}</td>
+
+            <!-- <td><button  class="btn btn-danger" (click)="cancelOrder(order.orderId)">Cancel</button></td> -->
+        </tr>
+    </tbody>
+</table>
+</div>
+</body>
+
+<app-footer></app-footer>
+
+<!-- <h2>  Welcome Admin</h2>
+<br>
+<button type="submit" class="btn btn-info btn-lg" (click)="logOut()">Log Out</button>  -->

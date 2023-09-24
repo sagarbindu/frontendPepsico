@@ -1,0 +1,81 @@
+
+<html lang = "en">  
+  <head>  
+     <meta charset = "utf-8">  
+     <meta name = "viewport" content = "width = device-width, initial-scale = 1, shrink-to-fit = no">  
+     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap" rel="stylesheet">        
+  </head>  
+  <body class="h-auto w-auto">  
+<section class="h-auto bg-dark">   
+
+ <div class="container py-5 h-75 w-75">  
+   <div class="row d-flex justify-content-center align-items-center h-100">  
+     <div class="col">  
+       <br> 
+       <div class="card card-registration" >  
+         <div class="card-body p-md-5 text-black">  
+           <h3 class="main-text mb-4 text-center" style="color: #144272;"> Inventory Management System </h3>  
+           </div>
+           
+         <div class="row g-0">  
+           <div class="col-md-6">  
+             <br>
+             <img  
+               src="../../../assets/logobg.png"  
+               alt="Sample photo"  
+               class="img-fluid w-100"  />  
+           </div>  
+           <div class="col-md-6">  
+             <div class="card-body p-md-5 text-black">  
+             
+               <h3 class="mb-5"> Log In </h3>  
+               <form #loginform="ngForm" (ngSubmit)="loginUser()">
+                   <!-- <small class="text-danger">{{msg}}</small> -->
+                   <h2>{{msg}}</h2>
+                  
+                   <div class="form-group">
+                     
+                     
+                    
+                       <div class="form-outline mb-4">  
+                         <input type="email" required id="email" class="form-control form-control-sm" 
+                         placeholder="Email ID" [(ngModel)]="user.email" name="email" ng-required="true"/>  
+                         <!-- <label class="form-label" for="form3Example97"> Email ID </label>   -->
+                       </div>  
+       
+                       <div class="form-outline mb-4">  
+                           <input type="password" required id="pwd" class="form-control form-control-sm" 
+                           placeholder="Password" [(ngModel)]="user.password" name="password" ng-required="true" />  
+                           <!-- <label class="form-label" for="form3Example97"> Password </label>   -->
+                         </div>  
+               <div class="container d-flex justify-content-center pt-3">
+               <button mat-raised-button type="reset" value="reset" class="btn btn-md"> Reset   </button>   &nbsp; &nbsp;
+                 <button mat-raised-button type="button" [disabled]="loginform.form.invalid" class="btn btn-info btn-md ms-2" (click)="loginUser()"> Log In </button>  
+                 <br />
+ 
+               </div>     
+               <br />
+               <div class="container d-flex justify-content-center">
+                
+                <div class="container textcol text-center" >Don't have an account? </div> 
+               </div>
+               
+                 <div class="signup d-flex justify-content-center">
+                 <button mat-raised-button routerLink="/register" class="btn btn-info btn-md">Sign Up</button> 
+               </div>
+             
+           </div>
+           </form>
+       
+             </div>  
+           </div>  
+         </div>  
+         <br> 
+       </div>  
+     </div>  
+   </div>  
+ </div>  
+</section>  
+</body>  
+</html>

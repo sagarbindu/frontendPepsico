@@ -1,0 +1,28 @@
+h5{
+    color: red;
+}
+h4{
+    text-align: center;
+    color: white;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    color: white;
+    /* border: 3px solid green; */
+  }
+
+body{
+    background-color: black;
+    padding-bottom: 20px;
+}
+
+.centered img {
+    width: 400px;
+    height: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }

@@ -1,0 +1,21 @@
+body 
+{  
+    color: green;  
+}  
+
+h2{
+    color: rgb(0, 213, 255);
+}
+.main-text {
+    font-family: 'Titillium Web', sans-serif;
+}
+.button-clr {
+    background-color: #e3e3e3;
+}
+.btn-info{
+    background-color: #4B56D2 !important;
+    color: white !important;
+}
+.btn-hov {
+    cursor: auto !important;
+}

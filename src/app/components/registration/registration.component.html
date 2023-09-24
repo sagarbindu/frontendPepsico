@@ -1,0 +1,88 @@
+<html lang = "en">  
+   <head>  
+      <meta charset = "utf-8">  
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1, shrink-to-fit = no">  
+      <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap" rel="stylesheet">        
+
+      
+   </head>  
+   <body class="w-auto h-auto">  
+<section class="h-auto bg-dark">  
+  <div class="container w-75 py-5 h-75">  
+    <div class="row d-flex justify-content-center align-items-center h-100">  
+      <div class="col">  
+        
+        <div class="card card-registration">  
+          <br/> <br/>
+          <h3 class="main-text mb-4 text-center" style="color: #144272;"> Inventory Management System </h3>   
+        
+          <div class="row g-0">  
+            <div class="col-xl-6 d-none d-xl-block">  
+              <br/> 
+                <img  
+                src="../../../assets/sign_up_pic.png"  
+                alt="Sample photo"  
+                class="img-fluid" style="margin-left: 80px;" />
+                
+            </div>  
+            <div class="col-xl-6">  
+              <div class="card-body p-md-5 text-black">  
+                <h3 class="mb-5"> Sign Up </h3>  
+                <form #registrationform="ngForm" (ngSubmit)="register()">
+                    <h2>{{msg}}</h2>
+                    <div class="form-group">
+                 
+                      <div class="form-outline mb-4">  
+                        <input type="text" required id="name" class="form-control form-control-sm" 
+                        placeholder="Name" [(ngModel)]="user.name" name="name"/>  
+                        <!-- <label class="form-label" for="form3Example8">  </label>   -->
+                      </div>  
+                        <div class="form-outline mb-4">  
+                        <input type="number" required id="phn" class="form-control form-control-sm" 
+                        placeholder="Phone Number" [(ngModel)]="user.phn" name="phn"/>  
+                        <!-- <label class="form-label" for="form3Example8"> Phone Number </label>   -->
+                      </div>  
+                        
+                       
+                      <div class="form-outline mb-4">  
+                        <input type="date" required id="dob" class="form-control form-control-sm" 
+                        placeholder="Date of Birth" [(ngModel)]="user.dob" name="dob" style="color: rgb(133, 132, 132);" />  
+                        <!-- <label class="form-label" for="form3Example9"> Date of Birth </label>   -->
+                      </div>  
+                       
+                      <div class="form-outline mb-4">  
+                        <input type="email" required id="email" class="form-control form-control-sm" 
+                        placeholder="Email ID" [(ngModel)]="user.email" name="email"/>  
+                        <!-- <label class="form-label" for="form3Example97"> Email ID </label>   -->
+                      </div>  
+      
+                      <div class="form-outline mb-4">  
+                          <input type="password" required id="pwd" class="form-control form-control-sm" 
+                          placeholder="Password" [(ngModel)]="user.password" name="password">  
+                          <!-- <label class="form-label" for="form3Example97"> Password </label>   -->
+                        </div>  
+           
+                    
+                
+                <div class="d-flex justify-content-center pt-3"> 
+                  
+                  <button mat-raised-button type="reset" value="reset" class="btn btn-light button-clr btn-sm"> Reset</button>   &nbsp; &nbsp;
+                  <button mat-raised-button type="button" [disabled]="registrationform.form.invalid" (click)="register()" class="btn btn-info btn-md ms-2"> Register </button>  
+                </div>  
+                <br /> 
+                <div class="signup d-flex justify-content-center">
+                  <button mat-raised-button routerLink="/login" class="btn btn-info btn-sm" role="button">Already registered? Log In </button> 
+                </div>
+                </div>
+                </form>
+              </div>  
+            </div>  
+          </div>  
+        </div>  
+      </div>  
+    </div>  
+  </div>  
+</section>  
+</body>  
+</html>

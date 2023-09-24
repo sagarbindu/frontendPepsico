@@ -1,0 +1,30 @@
+<app-header-user></app-header-user>
+<body>
+    <div class="container">
+        <br/>
+    <table class="table table-hover mx-auto">
+        <thead>
+            <tr class="table-dark">
+                <th>Id</th>
+                <th>Location No</th>
+                <th>Material Name</th>
+                <th>Available Quantity</th>
+                <th>Place Order</th>
+            </tr>
+        </thead>
+    
+        <tbody>
+            <!-- <tr> -->
+            <tr *ngFor="let inventory of inventories">
+                <td>{{inventory.id}}</td>
+                <td>{{inventory.locationNbr}}</td>
+                <td>{{inventory.materialId}}</td>
+                <td>{{inventory.resetQty - inventory.orderQty}}</td>
+              <td>  <button  class="btn btn-info btn-col" (click)="placeOrder(inventory.id)">Place Order</button> </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    </body>
+    
+    <app-footer></app-footer>
